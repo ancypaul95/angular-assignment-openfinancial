@@ -1,55 +1,69 @@
-<div class="eligibility">
-  <app-header></app-header>
-  <mat-grid-list cols="2">
-    <mat-grid-tile>
-      <!-- <p>We make it super simple</p> -->
-      <!-- <img src="../assets/images/blob-small.svg" /> -->
-      <img
-        src="../assets/images/collect_img-video@2x.png"
-        alt=""
-        class="eligibility__image"
-      />
-    </mat-grid-tile>
-    <mat-grid-tile>
-      <app-calculator></app-calculator>
-    </mat-grid-tile>
-  </mat-grid-list>
-</div>
-<div class="eligibility__content">
-  <div>
-    <app-eligibility-criteria
-      title="Quick cash disbursement"
-      description="Get terms loans that your business needs within 72 hrs"
-      image="../assets/images/GetPaidInstantly@2x.png"
-    ></app-eligibility-criteria>
-    <app-eligibility-criteria
-      title="Low-interest rate"
-      description="Achieve your financial goals with an amazing interest rate starting at 13% per annum"
-      image="../assets/images/Low_interest_rate@2x.png"
-    ></app-eligibility-criteria>
-    <app-eligibility-criteria
-      title="Zero Paperwork"
-      description="Get started instantly by submitting only your basic details & bank statements"
-      image="../assets/images/Secure_Payments@2x.png"
-    ></app-eligibility-criteria>
+<div class="position-relative">
+  <ng-container>
+    <div class="background background_left">
+      <img src="../assets/images/blob-small.svg" alt="eligibility-bg-image" />
+    </div>
+    <div class="background background_right">
+      <img src="../assets/images/circle.svg" alt="eligibility-bg-image" />
+    </div>
+    <div class="background_bottom">
+      <img src="../assets/images/sol_wave_bg.svg" alt="eligibility-bg-image" />
+    </div>
+  </ng-container>
+  <div class="eligibility">
+    <app-header></app-header>
+    <mat-grid-list cols="2">
+      <mat-grid-tile class="eligibility__main">
+        <app-heading>We make it Super Simple</app-heading>
+        <div class="eligibility__image-wrapper">
+          <img
+            src="../assets/images/collect_img-video@2x.png"
+            alt=""
+            class="eligibility__image"
+          />
+        </div>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <app-calculator></app-calculator>
+      </mat-grid-tile>
+    </mat-grid-list>
   </div>
-  <div>
-    <app-eligibility-criteria
-      title="Ace your business finances"
-      description="Manage banking, accounting & everything in between, on one platform"
-      image="../assets/images/freelancer_feature_icon_6@1.5x@2x.png"
-    ></app-eligibility-criteria>
-    <app-eligibility-criteria
-      title="Loans to fight COVID-19"
-      description="Zero EMI for first 3 months on Back-to-Business loans of upto 1 lakh"
-      image="../assets/images/Covid@2x.png"
-    ></app-eligibility-criteria>
-  </div>
-  <div>
-    <p class="eligibility__content__title">Boost your business with Open</p>
-    <p class="eligibility__content__body">
-      Get your hands on a term loan that’s crafted for your business
-    </p>
-    <app-button variant="stroke">Get an Open Account</app-button>
+  <div class="eligibility__content">
+    <div>
+      <app-eligibility-criteria
+        title="Quick cash disbursement"
+        description="Get terms loans that your business needs within 72 hrs"
+        image="../assets/images/GetPaidInstantly@2x.png"
+      ></app-eligibility-criteria>
+      <app-eligibility-criteria
+        title="Low-interest rate"
+        description="Achieve your financial goals with an amazing interest rate starting at 13% per annum"
+        image="../assets/images/Low_interest_rate@2x.png"
+      ></app-eligibility-criteria>
+      <app-eligibility-criteria
+        title="Zero Paperwork"
+        description="Get started instantly by submitting only your basic details & bank statements"
+        image="../assets/images/Secure_Payments@2x.png"
+      ></app-eligibility-criteria>
+    </div>
+    <div>
+      <app-eligibility-criteria
+        title="Ace your business finances"
+        description="Manage banking, accounting & everything in between, on one platform"
+        image="../assets/images/freelancer_feature_icon_6@1.5x@2x.png"
+      ></app-eligibility-criteria>
+      <app-eligibility-criteria
+        title="Loans to fight COVID-19"
+        description="Zero EMI for first 3 months on Back-to-Business loans of upto 1 lakh"
+        image="../assets/images/Covid@2x.png"
+      ></app-eligibility-criteria>
+    </div>
+    <div>
+      <app-heading>Boost your business with Open</app-heading>
+      <p class="eligibility__content__body">
+        Get your hands on a term loan that’s crafted for your business
+      </p>
+      <app-button variant="stroke">Get an Open Account</app-button>
+    </div>
   </div>
 </div>

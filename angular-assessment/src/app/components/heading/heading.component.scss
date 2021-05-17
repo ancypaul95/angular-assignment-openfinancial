@@ -1,0 +1,16 @@
+.heading {
+  font-size: 40px;
+  letter-spacing: 0;
+  line-height: 49px;
+  font-family: "Montserrat", sans-serif;
+  width: 80%;
+  &::after {
+    content: "";
+    width: 236px;
+    height: 8px;
+    display: block;
+    border-radius: 13px;
+    background-color: #707070;
+    margin-top: 10px;
+  }
+}

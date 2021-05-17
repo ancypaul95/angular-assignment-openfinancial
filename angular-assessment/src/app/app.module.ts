@@ -22,6 +22,7 @@ import { OutputCardComponent } from './components/output-card/output-card.compon
 import { IndianCurrencyPipe } from './pipes/indian-currency.pipe';
 import { ButtonComponent } from './components/button/button.component';
 import { HeaderComponent } from './components/header/header.component';
+import { HeadingComponent } from './components/heading/heading.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { HeaderComponent } from './components/header/header.component';
     IndianCurrencyPipe,
     ButtonComponent,
     HeaderComponent,
+    HeadingComponent,
   ],
   imports: [
     BrowserModule,
