@@ -1,0 +1,51 @@
+/*=====================================
+=            Pantone		          =
+=====================================*/
+/*
+	Here there are all the colors that will be present in the Web. 
+	
+	NEVER include them colors directly in your scss files. You should create in the Colors sections 
+	all the links to those colors and include them instead
+	
+	The names are generated from http://www.color-blindness.com/color-name-hue/
+*/
+$pantone: (
+  white-color: #ffffff,
+  black-color: #000000,
+  light-grey: #cccccc,
+  dim-grey: #666666,
+  nobel: #999999,
+  royal-purple: #663399,
+  nero: #222222,
+  night-rider: #333333,
+  amethyst: #9f62c9,
+);
+
+/*=====================================
+=            Colors           		 =
+=====================================*/
+/* 
+	Here we decide the "conceptual" colors of the WEB. It englobes concepts as primary, secondary, tertiary, text, selected, lead, title, background...
+	
+	TRY NOT TO put here colors referencing Components or HTML tags (such as h1, h2, tbody, nav, user-form...). 
+	
+	This colors can be included in scss files althought we can create intermediate colors referencing this ones if we need so.
+*/
+$color: (
+  primary: map-get($pantone, allports),
+  secondary: map-get($pantone, allports-secondary),
+  teritiary: map-get($pantone, viking),
+  quaternary: map-get($pantone, montana),
+  body: map-get($pantone, body),
+  border-primary: map-get($pantone, gainsboro),
+  border-secondary: map-get($pantone, light-grey),
+  border-checkbox: map-get($pantone, dim-grey),
+  bright-grey: map-get($pantone, brightgrey),
+  white: map-get($pantone, white-color),
+  black: map-get($pantone, black-color),
+  light-cyan: map-get($pantone, lightcyan),
+  box-shadow: map-get($pantone, white-smoke),
+  input-border: map-get($pantone, nobel),
+  table-cell-hover: map-get($pantone, pattens-blue),
+  alert: map-get($pantone, venetian-red),
+);

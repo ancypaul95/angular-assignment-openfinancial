@@ -1,0 +1,10 @@
+<button
+  mat-raised-button
+  class="button"
+  [ngClass]="{
+    button_stroke: variant === 'stroke',
+    button_inverted: variant === 'inverted'
+  }"
+>
+  <ng-content></ng-content>
+</button>

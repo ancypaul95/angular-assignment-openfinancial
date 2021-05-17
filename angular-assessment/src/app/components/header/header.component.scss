@@ -1,0 +1,40 @@
+@import "../../../styles/variables/_variables-master";
+
+.header {
+  &.header_inverse {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 5;
+    &,
+    & .mat-toolbar {
+      background-color: pantone(white-color);
+    }
+  }
+  &__toolbar {
+    padding: 25px 120px;
+  }
+  &,
+  & .mat-toolbar {
+    background-color: transparent;
+  }
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    &__items {
+      display: flex;
+      list-style-type: none;
+    }
+    &__item {
+      padding-left: 25px;
+      padding-right: 25px;
+      margin-left: 25px;
+      cursor: pointer;
+      &:hover {
+        color: pantone(royal-purple);
+      }
+    }
+  }
+}

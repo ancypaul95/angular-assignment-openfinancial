@@ -1,0 +1,71 @@
+<form class="input-card">
+  <h2 class="input-card__title">Eligibility Calculator</h2>
+  <section class="input-card__section">
+    <mat-label class="label">Monthly Income</mat-label>
+    <div class="input-card__text">{{ monthlyIncome | indianCurrency }}</div>
+    <mat-slider
+      name="monthly-income"
+      class="input-card__slider"
+      [min]="minMonthlyIncome"
+      [max]="maxMonthlyIncome"
+      step="10000"
+      color="primary"
+      [(ngModel)]="monthlyIncome"
+      (ngModelChange)="
+        monthlyExpense = monthlyExpense > monthlyIncome * 2 ? 0 : monthlyExpense
+      "
+    ></mat-slider>
+    <div class="input-card__slider-range">
+      <div>{{ minMonthlyIncome | indianCurrency}}</div>
+      <div>{{ maxMonthlyIncome | indianCurrency}}</div>
+    </div>
+  </section>
+  <section class="input-card__section">
+    <mat-label class="label">Monthly Expense</mat-label>
+    <div class="input-card__text">{{ monthlyExpense | indianCurrency }}</div>
+    <mat-slider
+      name="monthly-expense"
+      class="input-card__slider"
+      min="0"
+      [max]="monthlyIncome || 100000"
+      step="10000"
+      [disabled]="!monthlyIncome"
+      color="primary"
+      [(ngModel)]="monthlyExpense"
+    ></mat-slider>
+  </section>
+  <section class="input-card__section">
+    <mat-label class="label">Repayment Tenure</mat-label>
+    <div>
+      <mat-form-field class="input-card_full-width">
+        <mat-select name="tenure" [(ngModel)]="selectedTenure" class="input-card__select">
+          <mat-option *ngFor="let tenure of tenures" [value]="tenure.value">
+            {{ tenure.viewValue }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </section>
+  <section class="input-card__section input-card__section_space-between">
+    <mat-label class="label">Do you have any existing loans?</mat-label>
+    <mat-slide-toggle
+      name="has-loans"
+      color="primary"
+      class="input-card__slide-toggle"
+      [(ngModel)]="hasLoans"
+    ></mat-slide-toggle>
+  </section>
+  <section>
+    <mat-label class="label">EMI of existing loan (optional)</mat-label>
+    <mat-form-field class="input-card_full-width">
+      <input
+        matInput
+        class="input-card__text"
+        [value]="existingLoan | indianCurrency"
+        [disabled]="!hasLoans"
+        [(ngModel)]="existingLoan"
+        name="existingLoan"
+      />
+    </mat-form-field>
+  </section>
+</form>

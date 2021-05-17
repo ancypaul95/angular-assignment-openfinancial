@@ -1,0 +1,27 @@
+@import "../../../styles/variables/_variables-master";
+
+.button {
+  background: pantone(white-color) 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0px 20px #00000033;
+  border-radius: 24px;
+  padding: 10px 20px;
+  letter-spacing: 0px;
+  color: pantone(royal-purple);
+  // text-transform: capitalize;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: "Montserrat", sans-serif;
+  &_stroke {
+    border: 1px solid pantone(royal-purple);
+  }
+  &_inverted {
+    background: transparent
+      linear-gradient(90deg, pantone(amethyst) 0%, pantone(royal-purple) 100%)
+      0% 0% no-repeat padding-box;
+    color: pantone(white-color);
+  }
+  &:hover {
+    background-color: pantone(royal-purple);
+    color: pantone(white-color);
+  }
+}

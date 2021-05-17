@@ -1,0 +1,44 @@
+@import "../../../styles/variables/_variables-master";
+
+.eligibility-criteria {
+  $root: &;
+  top: 1137px;
+  left: 191px;
+  max-width: 391px;
+  max-height: 253px;
+  box-shadow: 0px 0px 30px #2321321f;
+  border: 1px solid pantone(white-color);
+  border-radius: 20px;
+  opacity: 1;
+  padding-left: 34.02px;
+  padding-top: 33.72px;
+  box-sizing: border-box;
+  margin-bottom: 60px;
+  margin-right: 48px;
+  &:hover {
+    background-color: pantone(amethyst);
+    #{$root}__content {
+      &__title,
+      &__description {
+        color: pantone(white-color);
+      }
+    }
+  }
+  &__image {
+    width: 90px;
+    height: 90px;
+  }
+  &__content {
+    font-size: 15px;
+    opacity: 1;
+    font-family: font-family(default);
+    &__title {
+      color: pantone(night-rider);
+      font-weight: 600;
+    }
+    &__description {
+      color: pantone(nobel);
+      font-weight: 400;
+    }
+  }
+}

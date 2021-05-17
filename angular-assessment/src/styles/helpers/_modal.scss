@@ -1,0 +1,46 @@
+@import '../variables/_variables-master';
+.modal {
+  $root: &;
+  &_sidebar-config {
+    &#{$root}-dialog-right {
+      position: fixed;
+      right: 0;
+      width: 360px !important;
+      top: 0;
+      height: 100vh;
+      z-index: 1;
+      margin: unset !important;
+    }
+    #{$root}-title {
+      font-family: font-family(default);
+      font-size: font-size(modal-title);
+      color: color(quaternary);
+      line-height: 23px;
+      letter-spacing: normal;
+      font-weight: normal;
+    }
+    #{$root}-content {
+      padding: 20px;
+      height: 100%;
+      border-radius: unset;
+      border: unset;
+      .close {
+        font-size: font-size(icon);
+        cursor: pointer;
+      }
+    }
+    #{$root}-body {
+      height: calc(100vh - 60px);
+      overflow: auto;
+      padding-right: 10px !important;
+      margin-right: -15px;
+    }
+  }
+  @include media-breakpoint-down(md) {
+    &_sidebar-config {
+      &#{$root}-dialog-right {
+        width: 100% !important;
+      }
+    }
+  }
+}

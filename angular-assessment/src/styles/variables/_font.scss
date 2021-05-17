@@ -1,0 +1,33 @@
+@import "./utilities";
+/*==================================
+=            Typography            =
+==================================*/
+/**
+	Define here all the typographies and sizes of the web fonts. We can use HTML tags directly or conceptual terms like title, lead...
+**/
+$font-family-basic: (
+  source-sans: (
+    "Montserrat",
+    sans-serif,
+  ),
+  icomoon: (
+    "icomoon",
+  ),
+);
+
+$font-family: (
+  default: map-get($font-family-basic, source-sans),
+  icons: map-get($font-family-basic, icomoon),
+);
+
+$font-size: (
+  html: 16px,
+  /* base font size. Do not touch if you don't know what you're doing */ body:
+    rem-calc(18),
+  body-s: rem-calc(14),
+  body-m: rem-calc(20),
+  modal-title: rem-calc(21),
+  small: rem-calc(12),
+  medium: rem-calc(30),
+  icon: rem-calc(24),
+);

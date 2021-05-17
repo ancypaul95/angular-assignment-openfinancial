@@ -1,0 +1,15 @@
+// Gutter margins
+$grid-gutter: (
+  primary: 30px,
+  secondary: 50px,
+  tertiary: 60px,
+  quaternary: 80px,
+);
+
+// Component Paddings
+$spacing: (
+  primary: map-get($grid-gutter, primary) / 2,
+  secondary: map-get($grid-gutter, secondary) / 2,
+  tertiary: map-get($grid-gutter, tertiary) / 2,
+  quaternary: map-get($grid-gutter, quaternary) / 2,
+);
